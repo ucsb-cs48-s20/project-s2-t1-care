@@ -36,10 +36,6 @@ class PlantGif extends React.Component {
 
   async returnPlantLevel() {
     const res = await fetch("/api/daily?sub=" + this.user.sub);
-    // if (res.status === 201) {
-    //   const userObj = await res.json();
-    //   mutate(userObj);
-    // }
     return res.json();
   }
 
