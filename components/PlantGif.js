@@ -27,7 +27,7 @@ function JSONDisplay(props) {
 class PlantGif extends React.Component {
   constructor(props) {
     super(props);
-    this.user = props.user;
+    //this.user = props.user;
     this.state = { plantLevel: 0, testList: [], plant2: 0 };
     this.plant = 10;
     this.plantIMG = "plantframes/frame_00_delay-0.04s.gif";
