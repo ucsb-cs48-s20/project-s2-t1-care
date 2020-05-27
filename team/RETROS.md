@@ -1,3 +1,19 @@
+# Retro 05/26/20
+
+- Led by: Leron Reznikov
+- Present: Lina Zeng, Julian Wong, Cindy Zhao, Misha Obukhov
+- Absent: none
+
+## Action item
+
+- We want to plan to branch off and split up more effectively. This is meant to address the issues of being more productive and of problematic Github experiences that several team members have brought here
+
+## Brief description of how retro went
+
+- We used the stop, start, continue template
+- We were able to identify two workflow problems that we will address in the coming weeks
+- The icebreakers were good but could be improved in a later retro
+
 # Retro 05/11/20
 
 - Led by: Julian Wong
