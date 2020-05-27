@@ -6,6 +6,10 @@
 | Tue 04/14 | Lina Zeng      | Led team discussion of learning plan                   |
 | Mon 04/20 | Cindy Zhao     | Led first Retro                                        |
 | Thu 05/07 | Misha Obukhov  | Demo of MVP                                            |
-| Mon 05/11 | Julian Wong    | Will lead second Retro                                 |
-| Tue 05/12 | Misha Obukhov  | Sprint Meeting                                         |
-| Tue 05/26 | Leron Reznikov | Will lead third retro                                  |
+| Mon 05/11 | Julian Wong    | Led second Retro                                       |
+| Tue 05/12 | Misha Obukhov  | Sprint Planning                                        |
+| Thu 05/21 | Misha Obukhov  | Demo of MVP                                            |
+| Tue 05/26 | Leron Reznikov | Led third retro                                        |
+| Tue 05/26 | Lina Zeng      | Sprint Planning                                        |
+| Thu 06/24 | Cindy Zhao     | Will lead last Retro                                   |
+
