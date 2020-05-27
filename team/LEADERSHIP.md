@@ -11,5 +11,4 @@
 | Thu 05/21 | Misha Obukhov  | Demo of MVP                                            |
 | Tue 05/26 | Leron Reznikov | Led third retro                                        |
 | Tue 05/26 | Lina Zeng      | Sprint Planning                                        |
-| Thu 06/24 | Cindy Zhao     | Will lead last Retro                                   |
 
