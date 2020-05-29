@@ -35,7 +35,6 @@ Tech stack: next.js
   - custom option to track - select from amount, time, etc. and let the program set goals for you
   - custom plant / room / visuals
 
-
 | Command                   | Description                                           |
 | ------------------------- | ----------------------------------------------------- |
 | `npm install`             | Install Dependencies                                  |

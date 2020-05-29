@@ -1,4 +1,3 @@
-  
 import React from "react";
 import JournalForm from "../components/JournalForm";
 import { select, text } from "@storybook/addon-knobs";
@@ -20,7 +19,5 @@ export const loggedInDoesNothingAtAll = () => {
     "https://avatars3.githubusercontent.com/u/1119017"
   );
   const user = { name, role, picture };
-  return (
-    <JournalForm user={user} />
-    );
+  return <JournalForm user={user} />;
 };

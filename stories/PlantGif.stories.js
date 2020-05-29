@@ -9,10 +9,9 @@ export default {
 
 //<PlantGif user={user} style={{ backgroundColor: "transparent" }} />
 
-
 export const newPlant = () => {
   const json = 0;
-  return <PlantGif json = {json}/>;
+  return <PlantGif json={json} />;
 };
 
 export const loggedIn = () => {
@@ -26,5 +25,5 @@ export const loggedIn = () => {
   const user = { name, role, picture, sub };
   const plant = 10;
 
-  return <PlantGif user={user} plant = {plant}/>;
+  return <PlantGif user={user} plant={plant} />;
 };
