@@ -12,4 +12,3 @@
 | Tue 05/26 | Leron Reznikov | Led third retro                                        |
 | Tue 05/26 | Lina Zeng      | Sprint Planning                                        |
 | Wed 05/26 | Cindy, Julian  | Demo of Final Product                                  |
-
