@@ -8,7 +8,8 @@
 | Thu 05/07 | Misha Obukhov  | Demo of MVP                                            |
 | Mon 05/11 | Julian Wong    | Led second Retro                                       |
 | Tue 05/12 | Misha Obukhov  | Sprint Planning                                        |
-| Thu 05/21 | Misha Obukhov  | Demo of MVP                                            |
+| Thu 05/21 | Misha Obukhov  | Demo of 1st Iteration                                  |
 | Tue 05/26 | Leron Reznikov | Led third retro                                        |
 | Tue 05/26 | Lina Zeng      | Sprint Planning                                        |
+| Wed 05/26 | Cindy, Julian  | Demo of Final Product                                  |
 
