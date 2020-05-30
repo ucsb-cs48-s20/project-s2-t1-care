@@ -9,7 +9,7 @@ export default function MultiForm(props) {
 
   return (
     <Layout user={user}>
-      <h1> let's grow together </h1>
+      <h1> let's see how you're doing! </h1>
       <JournalLog user={user}></JournalLog>
     </Layout>
   );

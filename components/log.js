@@ -25,24 +25,24 @@ class JournalLog extends React.Component {
   constructor(props) {
     super(props);
     this.user = props.user;
-    this.state = { plantLevel: 0, testList: [], plant2: 0 };
+    this.state = { userData: 0, testList: [], plant2: 0 };
     this.plant = 10;
     this.plantIMG = "plantframes/frame_00_delay-0.04s.gif";
     this.firstLevel = 0;
   }
 
-  async returnPlantLevel() {
+  async returnuserData() {
     const res = await fetch("/api/daily?sub=" + this.user.sub);
     return res.json();
   }
   async componentDidMount() {
-    const plantLevel = await this.returnPlantLevel();
-    if (plantLevel) {
-      console.log(plantLevel.testList);
-      this.firstLevel = plantLevel.testList;
+    const userData = await this.returnuserData();
+    if (userData) {
+      console.log(userData.testList);
+      this.firstLevel = userData.testList;
     }
-    if (plantLevel) {
-      this.setState({ plantLevel: plantLevel, plant2: plantLevel.PlantLevel });
+    if (userData) {
+      this.setState({ userData: userData, plant2: userData.userData });
     }
   }
 

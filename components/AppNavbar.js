@@ -10,7 +10,8 @@ function AppNavbar(props) {
   const user = props.user;
 
   return (
-    <Navbar bg="light" expand="lg">
+    // <Navbar bg="primary" expand="lg">
+    <Navbar bg="warning" expand="lg">
       <Container>
         <Link href="/" passHref={true}>
           <Navbar.Brand>take care of you and your plant</Navbar.Brand>
@@ -24,11 +25,19 @@ function AppNavbar(props) {
               </Link>
             )}
           </Nav>
+          <Nav className="mr-auto">
+            {user && (
+              <Link href="/history" passHref={true}>
+                <Nav.Link>history</Nav.Link>
+              </Link>
+            )}
+          </Nav>
+
           <Link
             href="https://github.com/ucsb-cs48-s20/project-s2-t1-care"
             passHref={true}
           >
-            <Navbar.Brand>github</Navbar.Brand>
+            <Nav.Link>github</Nav.Link>
           </Link>
           <Nav>
             {user ? (
