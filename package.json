@@ -14,7 +14,8 @@
     "test:cypress": "start-server-and-test dev 3000 cy:run",
     "danger": "danger",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook -c .storybook -o ../project-s2-t1-care-storybook/docs"
+    "build-storybook": "build-storybook -c .storybook -o ../project-s2-t1-care-storybook/docs",
+    "test:jest": "jest"
   },
   "husky": {
     "hooks": {
@@ -39,18 +40,8 @@
     "swr": "^0.1.18"
   },
   "devDependencies": {
-    "@rckeller/cypress-unfetch": "^1.0.1",
-    "cypress": "^4.2.0",
-    "danger": "^10.0.0",
-    "heroku-dotenv": "^0.4.1",
-    "husky": "^4.2.3",
-    "inquirer": "^7.1.0",
-    "now": "^18.0.0",
-    "npm-run-all": "^4.1.5",
-    "prettier": "^2.0.5",
-    "pretty-quick": "^2.0.1",
-    "start-server-and-test": "^1.10.11",
     "@babel/core": "^7.9.6",
+    "@rckeller/cypress-unfetch": "^1.0.1",
     "@storybook/addon-a11y": "^5.3.18",
     "@storybook/addon-actions": "^5.3.18",
     "@storybook/addon-knobs": "^5.3.18",
@@ -60,6 +51,17 @@
     "@storybook/addons": "^5.3.18",
     "@storybook/react": "^5.3.18",
     "babel-loader": "^8.1.0",
+    "cypress": "^4.2.0",
+    "danger": "^10.0.0",
+    "heroku-dotenv": "^0.4.1",
+    "husky": "^4.2.3",
+    "inquirer": "^7.1.0",
+    "jest": "^26.0.1",
+    "now": "^18.0.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.0.5",
+    "pretty-quick": "^2.0.1",
+    "start-server-and-test": "^1.10.11",
     "terser-webpack-plugin": "^2.3.5"
   }
 }
