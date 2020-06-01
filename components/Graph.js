@@ -21,8 +21,6 @@ class Graph extends React.Component {
     super(props);
     this.user = props.user;
     this.state = { userData: 0, testList: [], plant2: 0 };
-    this.plant = 10;
-    this.plantIMG = "plantframes/frame_00_delay-0.04s.gif";
     this.firstLevel = 0;
   }
 
