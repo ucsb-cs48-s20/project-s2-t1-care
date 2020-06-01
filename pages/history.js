@@ -14,9 +14,15 @@ export default function MultiForm(props) {
 
   return (
     <Layout user={user}>
-      <h1> let's see how you're doing! </h1>
-      <Graph user={user}></Graph>
-      <JournalLog user={user}></JournalLog>
+      {user ? (
+        <div>
+          <h1> let's see how you're doing! </h1>
+          <Graph user={user}></Graph>
+          <JournalLog user={user}></JournalLog>
+        </div>
+      ) : (
+        <h1> you must log in to access your history! </h1>
+      )}
     </Layout>
   );
 }
