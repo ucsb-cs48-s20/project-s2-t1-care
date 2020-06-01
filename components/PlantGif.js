@@ -86,8 +86,12 @@ class PlantGif extends React.Component {
             />
           </div>
         </div>
-        <div className="column">
+        {/* <div className="column">
           <JSONDisplay json={this.firstLevel} />
+        </div> */}
+        <div className="column" style={{ textAlign: "center" }}>
+          This is your plant. It is a representation of how you're doing. Log
+          more entries and meet your goals to see it improve.
         </div>
       </>
     );
