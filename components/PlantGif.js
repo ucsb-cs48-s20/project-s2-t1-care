@@ -11,7 +11,7 @@ function JSONDisplay(props) {
         <p>
           {" "}
           on {element.date}, you felt {element.todayMood} and got{" "}
-          {element.todaySleep} of sleep.
+          {element.todaySleep} of sleep and your goal was {element.todayGoal}.
         </p>
         <br />
       </>
@@ -41,6 +41,7 @@ class PlantGif extends React.Component {
 
   async componentDidMount() {
     const plantLevel = await this.returnPlantLevel();
+    // const goalLevel = await this.returnGoalLevel();
     if (plantLevel) {
       this.plant = Math.floor(plantLevel.PlantLevel / 4);
     } else {
