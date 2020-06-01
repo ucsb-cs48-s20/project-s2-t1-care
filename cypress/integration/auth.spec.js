@@ -20,8 +20,7 @@ describe("Authentication", () => {
     cy.visit("http://localhost:3000");
     cy.get("div.container").contains("you're not logged in!");
     cy.visit("http://localhost:3000/journal");
-    cy.get("div.container").contains("let's grow together");
-    // this should fail once we rebase
+    cy.get("div.container").contains("you must log in to access your journal!");
   });
 
   it("has navbar options for logged in", () => {
@@ -29,7 +28,6 @@ describe("Authentication", () => {
     cy.visit("http://localhost:3000");
     cy.get("nav.navbar").contains("take care of you and your plant");
     cy.get("nav.navbar").contains("github");
-    //cy.get("a.dropdown").contains("Example Guest");
     cy.get("nav.navbar").contains("journal");
     cy.visit("http://localhost:3000/journal");
     cy.get("div.container").contains("let's grow together");
