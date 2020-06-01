@@ -42,8 +42,12 @@ class PlantGif extends React.Component {
   async componentDidMount() {
     const plantLevel = await this.returnPlantLevel();
     // const goalLevel = await this.returnGoalLevel();
+    var obj = JSON.parse(plantLevel.tesList[0]);
+    this.goal = obj.todayGoal;
+    console.log(this.goal);
+
     if (plantLevel) {
-      this.plant = Math.floor(plantLevel.PlantLevel / 4);
+      this.plant = Math.floor(plantLevel.PlantLevel / this.goal);
     } else {
       this.plant = 0;
     }
