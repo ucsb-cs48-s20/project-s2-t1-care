@@ -1,6 +1,7 @@
 import Button from "react-bootstrap/Button";
 import { mutate } from "swr";
 import Router from "next/router";
+import { plantGrowth } from "../utils/growLogic";
 
 export class JournalForm extends React.Component {
   constructor(props) {
@@ -21,8 +22,7 @@ export class JournalForm extends React.Component {
   }
 
   async handleSubmit(event) {
-    var plantLevel = 0;
-    plantLevel += parseInt(this.state.sleep);
+    var plantLevel = plantGrowth(this.state.mood, parseInt(this.state.sleep));
 
     event.preventDefault();
 

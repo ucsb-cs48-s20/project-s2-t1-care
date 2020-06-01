@@ -17,5 +17,6 @@ module.exports = {
       process.env.SESSION_COOKIE_SECRET ||
       "viloxyf_z2GW6K4CT-KQD_MoLEA2wqv5jWuq4Jd0P7ymgG5GJGMpvMneXZzhK3sL",
     SESSION_COOKIE_LIFETIME: 7200, // 2 hours
+    USE_TEST_AUTH: process.env.USE_TEST_AUTH,
   },
 };
