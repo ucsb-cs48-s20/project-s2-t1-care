@@ -1,11 +1,28 @@
 import Button from "react-bootstrap/Button";
 import Image from "react-bootstrap/Image";
+import Toast from "react-bootstrap/Toast";
 
 function JSONDisplay(props) {
+  var d = new Date();
+  var date = d.getMonth() + 1 + " " + d.getDate() + " " + d.getFullYear();
+  var notif = "";
   if (props.json === 0) {
     return <p> start growing by submitting a journal entry! </p>;
   } else {
     console.log(props.json[0]);
+    if (props.json[0].date == date) {
+      notif = (
+        <Toast>
+          <Toast.Body>you have submitted today</Toast.Body>
+        </Toast>
+      );
+    } else {
+      notif = (
+        <Toast>
+          <Toast.Body>you have not submitted today</Toast.Body>
+        </Toast>
+      );
+    }
     const listItems = props.json.map((element) => (
       <>
         <p>
@@ -18,6 +35,7 @@ function JSONDisplay(props) {
     ));
     return (
       <>
+        <h3> {notif} </h3>
         <p> {listItems} </p>
       </>
     );
@@ -64,10 +82,10 @@ class PlantGif extends React.Component {
   }
 
   render() {
-    const jsonData = this.firstlevel;
+    const jsonData = this.firstLevel;
     let jsonDisplay;
     if (jsonData === 0) {
-      jsonDisplay = <p>Start growing by submitting a Journal entry!</p>;
+      jsonDisplay = <p>start growing by submitting a journal entry!</p>;
     } else {
       jsonDisplay = <p>{jsonData}</p>;
     }
