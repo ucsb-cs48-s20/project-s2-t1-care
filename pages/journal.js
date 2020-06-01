@@ -9,8 +9,14 @@ export default function MultiForm(props) {
 
   return (
     <Layout user={user}>
-      <h1> let's grow together </h1>
-      <JournalForm user={user}></JournalForm>
+      {user ? (
+        <div>
+          <h1> let's grow together </h1>
+          <JournalForm user={user}></JournalForm>
+        </div>
+      ) : (
+        <h1> you must log in to access your journal! </h1>
+      )}
     </Layout>
   );
 }
