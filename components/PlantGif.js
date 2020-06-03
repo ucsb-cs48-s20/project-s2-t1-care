@@ -7,18 +7,30 @@ function JSONDisplay(props) {
   var date = d.getMonth() + 1 + " " + d.getDate() + " " + d.getFullYear();
   var notif = "";
   if (props.json === 0) {
-    return <p> start growing by submitting a journal entry! </p>;
+    return <p> </p>;
   } else {
     console.log(props.json[0]);
     if (props.json[0].date == date) {
       notif = (
-        <Toast>
+        <Toast
+          style={{
+            position: "absolute",
+            top: "150px",
+            right: "180px",
+          }}
+        >
           <Toast.Body>you have submitted today</Toast.Body>
         </Toast>
       );
     } else {
       notif = (
-        <Toast>
+        <Toast
+          style={{
+            position: "absolute",
+            top: 100,
+            right: 100,
+          }}
+        >
           <Toast.Body>you have not submitted today</Toast.Body>
         </Toast>
       );
@@ -33,12 +45,7 @@ function JSONDisplay(props) {
         <br />
       </>
     ));
-    return (
-      <>
-        <h3> {notif} </h3>
-        <p> {listItems} </p>
-      </>
-    );
+    return <>{notif}</>;
   }
 }
 
@@ -94,6 +101,7 @@ class PlantGif extends React.Component {
       <>
         <div className="container" style={{ textAlign: "center" }}>
           <div className="column" style={{ display: "inline-block" }}>
+            <JSONDisplay json={this.firstLevel} />
             <img
               src={this.plantIMG}
               style={{
@@ -104,10 +112,17 @@ class PlantGif extends React.Component {
             />
           </div>
         </div>
-        <div className="column" style={{ textAlign: "center" }}>
-          This is your plant. It is a representation of how you're doing. Log
+        <div
+          className="column"
+          style={{ textAlign: "center", margin: "0 auto" }}
+        >
+          this is your plant. it is a representation of how you're doing. log
           more entries and meet your goals to see it improve.
         </div>
+        <div
+          className="column"
+          style={{ textAlign: "center", margin: "0 auto" }}
+        ></div>
       </>
     );
   }
