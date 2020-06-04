@@ -3,7 +3,7 @@ import { mutate } from "swr";
 import Router from "next/router";
 import { plantGrowth } from "../utils/growLogic";
 
-export class JournalForm extends React.Component {
+export class Settings extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -54,9 +54,9 @@ export class JournalForm extends React.Component {
       body: JSON.stringify(body),
     });
     /* if (res.status === 201) {
-      const userObj = await res.json();
-      mutate(userObj);
-    } */
+        const userObj = await res.json();
+        mutate(userObj);
+      } */
 
     //delay, you submitted _ something and will be redirected
     Router.push("/");
@@ -115,4 +115,4 @@ export class JournalForm extends React.Component {
     );
   }
 }
-export default JournalForm;
+export default Settings;
