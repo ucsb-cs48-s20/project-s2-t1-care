@@ -50,7 +50,7 @@ class JournalLog extends React.Component {
     const jsonData = this.firstlevel;
     let jsonDisplay;
     if (jsonData === 0) {
-      jsonDisplay = <p>Start growing by submitting a Journal entry!</p>;
+      jsonDisplay = <p>start growing by submitting a journal entry!</p>;
     } else {
       jsonDisplay = <p>{jsonData}</p>;
     }

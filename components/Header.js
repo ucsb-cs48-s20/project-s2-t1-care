@@ -4,7 +4,7 @@ import Head from "next/head";
 function Header() {
   return (
     <Head>
-      <title> Mood Plant ❀ </title>
+      <title> plant buds </title>
       <link rel="icon" href="/favicon_io/favicon.ico" />
       <link
         rel="apple-touch-icon"

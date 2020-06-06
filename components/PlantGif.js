@@ -117,7 +117,7 @@ class PlantGif extends React.Component {
           style={{ textAlign: "center", margin: "0 auto" }}
         >
           this is your plant. it is a representation of how you're doing. log
-          more entries and meet your goals to see it improve.
+          more entries and meet your goals to see it grows with you.
         </div>
         <div
           className="column"

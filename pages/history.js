@@ -16,7 +16,8 @@ export default function MultiForm(props) {
     <Layout user={user}>
       {user ? (
         <div>
-          <h1> let's see how you're doing! </h1>
+          <h1> journal history log </h1>
+          <h2> let's see how you've been doing!</h2>
           <Graph user={user}></Graph>
           <JournalLog user={user}></JournalLog>
         </div>
