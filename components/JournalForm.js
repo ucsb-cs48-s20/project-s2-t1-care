@@ -10,11 +10,24 @@ export class JournalForm extends React.Component {
       user: props.user,
       sleep: "0 hour(s)",
       mood: "okay",
+      currGoal: 8,
     };
 
     this.handleInputChange = this.handleInputChange.bind(this);
 
     this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  async componentDidMount() {
+    const userData = await this.returnUserData();
+    if (userData) {
+      this.setState({ currGoal: userData.goal });
+    }
+  }
+
+  async returnUserData() {
+    const res = await fetch("/api/daily?sub=" + this.state.user.sub);
+    return res.json();
   }
 
   handleInputChange(event) {
@@ -39,10 +52,17 @@ export class JournalForm extends React.Component {
       todayMood: this.state.mood,
     };
 
+    var currGoal = 8;
+    /* const userData = await this.returnUserData();
+    if (userData) {
+      currGoal = parseInt(userData.goal);
+    } */
+
     const body = {
       user: this.state.user,
       plantLevel: plantLevel,
       entry: entry,
+      goal: currGoal,
     };
     //get request, make sure they have submitted as different day
 
@@ -51,10 +71,6 @@ export class JournalForm extends React.Component {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(body),
     });
-    /* if (res.status === 201) {
-      const userObj = await res.json();
-      mutate(userObj);
-    } */
 
     //delay, you submitted _ something and will be redirected
     Router.push("/");
@@ -64,8 +80,7 @@ export class JournalForm extends React.Component {
     return (
       <form onSubmit={this.handleSubmit.bind(this)}>
         <label>
-          sleep goal is automatically set to 8 hours. if you want to change it,
-          go to the settings page!
+          sleep goal is {this.state.currGoal}
           <br></br>
         </label>
         <br></br>

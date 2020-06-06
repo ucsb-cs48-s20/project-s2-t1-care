@@ -1,7 +1,5 @@
 import Button from "react-bootstrap/Button";
 import { mutate } from "swr";
-import Router from "next/router";
-import { plantGrowth } from "../utils/growLogic";
 
 export class Settings extends React.Component {
   constructor(props) {
@@ -25,44 +23,28 @@ export class Settings extends React.Component {
   }
 
   async handleSubmit(event) {
-    var plantLevel = plantGrowth(this.state.mood, parseInt(this.state.sleep));
-
     event.preventDefault();
-
-    var d = new Date();
-    var date = d.getMonth() + 1 + " " + d.getDate() + " " + d.getFullYear();
-    console.log(date);
-    const entry = {
-      date: date,
-      todayGoal: this.state.goal,
-    };
 
     const body = {
       user: this.state.user,
-      plantLevel: plantLevel,
-      entry: entry,
+      goal: parseInt(this.state.goal),
     };
     //get request, make sure they have submitted as different day
 
-    const res = await fetch("/api/daily", {
+    const res = await fetch("/api/settings", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(body),
     });
-    /* if (res.status === 201) {
-        const userObj = await res.json();
-        mutate(userObj);
-      } */
 
     //delay, you submitted _ something and will be redirected
-    Router.push("/");
   }
 
   render() {
     return (
       <form onSubmit={this.handleSubmit.bind(this)}>
         <label>
-          how many hours of sleep do you want to get every night?
+          what is your sleep goal?
           <br></br>
           <select
             name="goal"
