@@ -6,7 +6,7 @@ function GenerateGraphData(inputList) {
   let y2 = [];
   var i;
   for (i = 0; i < inputList.length; i++) {
-    x.push(i);
+    x.push(inputList.length - 1 - i);
     y.push(parseInt(inputList[i].todaySleep));
     let temp = 0;
     if (inputList[i].todayMood == "sad") {
