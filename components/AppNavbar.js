@@ -44,7 +44,7 @@ function AppNavbar(props) {
               <NavDropdown
                 title={
                   <>
-                    hi, {user.name}
+                    hi, {user.name.toLowerCase()}
                     <Image
                       className="ml-2"
                       src={user.picture}
