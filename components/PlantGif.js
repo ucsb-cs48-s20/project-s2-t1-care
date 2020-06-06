@@ -2,53 +2,6 @@ import Button from "react-bootstrap/Button";
 import Image from "react-bootstrap/Image";
 import Toast from "react-bootstrap/Toast";
 
-function JSONDisplay(props) {
-  var d = new Date();
-  var date = d.getMonth() + 1 + " " + d.getDate() + " " + d.getFullYear();
-  var notif = "";
-  if (props.json === 0) {
-    return <p> </p>;
-  } else {
-    console.log(props.json[0]);
-    if (props.json[0].date == date) {
-      notif = (
-        <Toast
-          style={{
-            position: "absolute",
-            top: "150px",
-            right: "180px",
-          }}
-        >
-          <Toast.Body>you have submitted today</Toast.Body>
-        </Toast>
-      );
-    } else {
-      notif = (
-        <Toast
-          style={{
-            position: "absolute",
-            top: 100,
-            right: 100,
-          }}
-        >
-          <Toast.Body>you have not submitted today</Toast.Body>
-        </Toast>
-      );
-    }
-    const listItems = props.json.map((element) => (
-      <>
-        <p>
-          {" "}
-          on {element.date}, you felt {element.todayMood} and got{" "}
-          {element.todaySleep} of sleep.
-        </p>
-        <br />
-      </>
-    ));
-    return <>{notif}</>;
-  }
-}
-
 class PlantGif extends React.Component {
   constructor(props) {
     super(props);
@@ -89,19 +42,10 @@ class PlantGif extends React.Component {
   }
 
   render() {
-    const jsonData = this.firstLevel;
-    let jsonDisplay;
-    if (jsonData === 0) {
-      jsonDisplay = <p>start growing by submitting a journal entry!</p>;
-    } else {
-      jsonDisplay = <p>{jsonData}</p>;
-    }
-
     return (
       <>
         <div className="container" style={{ textAlign: "center" }}>
           <div className="column" style={{ display: "inline-block" }}>
-            <JSONDisplay json={this.firstLevel} />
             <img
               src={this.plantIMG}
               style={{
