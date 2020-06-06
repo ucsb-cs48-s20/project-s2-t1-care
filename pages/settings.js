@@ -11,7 +11,8 @@ export default function setform(props) {
     <Layout user={user}>
       {user ? (
         <div>
-          <h1> let's grow together </h1>
+          <h1> settings page </h1>
+          <Settings user={user}></Settings>
         </div>
       ) : (
         <h1> you must log in to access settings! </h1>

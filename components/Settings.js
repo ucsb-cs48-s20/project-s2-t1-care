@@ -9,8 +9,6 @@ export class Settings extends React.Component {
     this.state = {
       user: props.user,
       goal: "0 hour(s)",
-      sleep: "0 hour(s)",
-      mood: "okay",
     };
 
     this.handleInputChange = this.handleInputChange.bind(this);
@@ -37,8 +35,6 @@ export class Settings extends React.Component {
     const entry = {
       date: date,
       todayGoal: this.state.goal,
-      todaySleep: this.state.sleep,
-      todayMood: this.state.mood,
     };
 
     const body = {
@@ -66,17 +62,11 @@ export class Settings extends React.Component {
     return (
       <form onSubmit={this.handleSubmit.bind(this)}>
         <label>
-          sleep goal is automatically set to 8 hours. if you want to change it,
-          go to the settings page!
-          <br></br>
-        </label>
-        <br></br>
-        <label>
-          how many hours of sleep did you have?
+          how many hours of sleep do you want to get every night?
           <br></br>
           <select
-            name="sleep"
-            value={this.state.sleep}
+            name="goal"
+            value={this.state.goal}
             onChange={this.handleInputChange}
           >
             <option value="0 hour(s)">0 hour(s)</option>
@@ -93,20 +83,6 @@ export class Settings extends React.Component {
           </select>
         </label>
         <br></br>
-        <label>
-          how are you feeling today?
-          <br></br>
-          <select
-            name="mood"
-            value={this.state.mood}
-            onChange={this.handleInputChange}
-          >
-            <option value="happy">:)</option>
-            <option value="okay">:|</option>
-            <option value="sad">:'(</option>
-            <option value="angry">>:(</option>
-          </select>
-        </label>
         <br></br>
         <Button variant="success" type="submit">
           submit

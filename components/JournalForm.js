@@ -8,7 +8,6 @@ export class JournalForm extends React.Component {
     super(props);
     this.state = {
       user: props.user,
-      goal: "0 hour(s)",
       sleep: "0 hour(s)",
       mood: "okay",
     };
@@ -36,7 +35,6 @@ export class JournalForm extends React.Component {
     console.log(date);
     const entry = {
       date: date,
-      todayGoal: this.state.goal,
       todaySleep: this.state.sleep,
       todayMood: this.state.mood,
     };
