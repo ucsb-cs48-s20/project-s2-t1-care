@@ -2,7 +2,7 @@ function JSONDisplay(props) {
   if (props.json === 0) {
     return <p> start growing by submitting a journal entry! </p>;
   } else {
-    console.log(props.json[0]);
+    console.log(props.json);
     const listItems = props.json.map((element) => (
       <>
         <p>
@@ -40,7 +40,7 @@ class JournalLog extends React.Component {
     const userData = await this.returnuserData();
     if (userData) {
       console.log(userData.testList);
-      this.firstLevel = userData.testList;
+      this.firstLevel = userData.HistoryLog;
     }
     if (userData) {
       this.setState({ userData: userData, plant2: userData.userData });

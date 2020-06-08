@@ -34,7 +34,7 @@ class Graph extends React.Component {
   constructor(props) {
     super(props);
     this.user = props.user;
-    this.state = { userData: 0, testList: [], plant2: 0 };
+    this.state = { userData: 0, HistoryLog: [], plant2: 0 };
     this.firstLevel = 0;
   }
 
@@ -45,8 +45,8 @@ class Graph extends React.Component {
   async componentDidMount() {
     const userData = await this.returnuserData();
     if (userData) {
-      console.log(userData.testList);
-      this.firstLevel = userData.testList;
+      console.log(userData.HistoryLog);
+      this.firstLevel = userData.HistoryLog;
     }
     if (userData) {
       this.setState({ userData: userData, plant2: userData.userData });
