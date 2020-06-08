@@ -4,29 +4,31 @@ Description: an interactive self-care journal where you record your mood and sle
 
 ## Feature 1: journal form
 
-![journal_form.png](/journal_form.png)
-
 Description: log your mood and sleep every day in our simple journal form, sleep goal is also displayed on top
+
+![journal_form.png](/journal_form.png)
 
 ## Feature 2: plant
 
-![plant.png](/plant.png)
-
 Description: see your plant grow slowly as you log more entries. it grows more faster if you are happy and if you are meeting your sleep goal.
+
+![plant.png](/plant.png)
 
 ## Feature 3: setting sleep goal
 
-![settings.png](/settings.png)
-
 Description: if you have a different sleep schedule than the default, or want to change it at any time, you may change your sleep goal in settings.
 
-## Feature 4: history of entries
+![settings.png](/settings.png)
 
-Description: all of your previous journal entries are listed in the history tab. 
-
-## Feature 5: graph of your mood and sleep history
-
-![graph.png](/graph.png)
+## Feature 4: graph of your mood and sleep history
 
 Description: with the data from your previous journal entires, we created a graph to represent your sleep and mood over time.
+
+![care-graph.png](/care-graph.png)
+
+## Feature 5: history of entries
+
+Description: all of your previous journal entries are listed in the history tab.
+
+![care-history.png](/care-history.png)
 
