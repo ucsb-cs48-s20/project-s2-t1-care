@@ -8,7 +8,8 @@ function JSONDisplay(props) {
         <p>
           {" "}
           on {element.date}, you felt {element.todayMood} and got{" "}
-          {element.todaySleep} of sleep.
+          {element.todaySleep} of sleep when your sleep goal was{" "}
+          {element.todayGoal}
         </p>
         <br />
       </>
