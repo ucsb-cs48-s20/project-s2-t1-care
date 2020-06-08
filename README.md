@@ -1,6 +1,6 @@
 # This is the README for team s2-t1-care
 
-# Team s0-t1-budget Final Report, CS48, S20
+# Team s2-t1-care Final Report, CS48, S20
 
 * Team Members: Misha Obukhov, Leron Reznikov, Julian Wong, Lina Zeng, Cindy Zhao
 * Tech Stack: Node.js
