@@ -6,28 +6,11 @@ import { plantGrowth } from "../utils/growLogic";
 export class JournalForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      user: props.user,
-      sleep: "0 hour(s)",
-      mood: "okay",
-      currGoal: 8,
-    };
+    this.state = { user: props.user, sleep: "0 hour(s)", mood: "okay" };
 
     this.handleInputChange = this.handleInputChange.bind(this);
 
     this.handleSubmit = this.handleSubmit.bind(this);
-  }
-
-  async componentDidMount() {
-    const userData = await this.returnUserData();
-    if (userData) {
-      this.setState({ currGoal: userData.goal });
-    }
-  }
-
-  async returnUserData() {
-    const res = await fetch("/api/daily?sub=" + this.state.user.sub);
-    return res.json();
   }
 
   handleInputChange(event) {
@@ -39,11 +22,7 @@ export class JournalForm extends React.Component {
   }
 
   async handleSubmit(event) {
-    var plantLevel = plantGrowth(
-      parseInt(this.state.currGoal),
-      this.state.mood,
-      parseInt(this.state.sleep)
-    );
+    var plantLevel = plantGrowth(this.state.mood, parseInt(this.state.sleep));
 
     event.preventDefault();
 
@@ -56,13 +35,10 @@ export class JournalForm extends React.Component {
       todayMood: this.state.mood,
     };
 
-    var currGoal = 8;
-
     const body = {
       user: this.state.user,
       plantLevel: plantLevel,
       entry: entry,
-      goal: currGoal,
     };
     //get request, make sure they have submitted as different day
 
@@ -71,6 +47,10 @@ export class JournalForm extends React.Component {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(body),
     });
+    /* if (res.status === 201) {
+      const userObj = await res.json();
+      mutate(userObj);
+    } */
 
     //delay, you submitted _ something and will be redirected
     Router.push("/");
@@ -79,11 +59,6 @@ export class JournalForm extends React.Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit.bind(this)}>
-        <label>
-          sleep goal is {this.state.currGoal}
-          <br></br>
-        </label>
-        <br></br>
         <label>
           how many hours of sleep did you have?
           <br></br>
