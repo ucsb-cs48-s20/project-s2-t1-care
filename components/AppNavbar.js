@@ -54,7 +54,6 @@ function AppNavbar(props) {
                   </>
                 }
               >
-                <NavDropdown.Item href="/settings">settings</NavDropdown.Item>
                 <NavDropdown.Item className="text-danger" href="/api/logout">
                   logout
                 </NavDropdown.Item>
