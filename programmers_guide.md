@@ -3,13 +3,12 @@
 Tech Stack: 
 * Next.js
   #### Resources to learn and understand the structure of the code
-    * scottchow@ucsb.edu
     * https://nextjs.org/learn/basics/create-nextjs-app
     
 
 React Frameworks:
 * React Bootstrap
-* Plotly
+* Plotly: A react library that allows you to very simply create good looking graphs. By generating a list of x and y, it creates a very elegant line graph (or any type of graph). Documentation, including more advanced styling, can be found here: https://plotly.com/javascript/react/
 
 Database:
 * mongoDB
