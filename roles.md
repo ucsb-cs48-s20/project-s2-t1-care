@@ -9,3 +9,7 @@ Initially, we all worked together to set the database up. I had a big role in ge
 
 #### Cindy
 In the beginning, we all did the database together because it was a really big portion of our project. I worked on the frontend and backend connection because we were having a lot of trouble on it. Overall, we did most of our issues together where we had weekly Zoom meetings outside of class hours and we would help each other and do the iterations. I supported my team members in areas by helping them debug code. Later, I worked on Settings page where the user could input in their sleep goal. The sleep goal is entered into the database and used ask part of the equation to grow the plant. The goal is also displayed in the journal entries page to let the user know what their goal was when they enter their hours. 
+
+#### Lina 
+
+Overall, our team worked heavily together on almost every aspect during lectures, sections, and our consistent Zoom work sessions. Our collaborated contributions consisted of GitHub mishaps, testing, labs, any feature concerning database, and almost every other feature and QA. I individually contributed most to the frontend, setting the outline for our MVP with the journal form and plant display as well as displaying toasts indicating submission. 
