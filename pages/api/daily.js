@@ -56,12 +56,13 @@ async function updatePlantLevel(req) {
   const mutation = {
     $setOnInsert: {
       user,
+      goal: req.body.goal,
     },
     $inc: {
       PlantLevel: req.body.plantLevel,
     },
     $push: {
-      testList: {
+      HistoryLog: {
         $each: [req.body.entry],
         $position: 0,
       },

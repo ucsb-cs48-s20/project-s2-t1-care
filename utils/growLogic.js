@@ -2,7 +2,7 @@ function throwError(message) {
   throw new Error(message);
 }
 
-export function plantGrowth(mood, sleep) {
+export function plantGrowth(goal, mood, sleep) {
   typeof mood === "string" || throwError("mood should be of type string");
   typeof sleep === "number" || throwError("sleep should be of type int");
 
@@ -12,10 +12,10 @@ export function plantGrowth(mood, sleep) {
   var plantLevel = 0;
   switch (mood) {
     case "happy":
-      plantLevel += 4;
+      plantLevel += 2;
       break;
     case "okay":
-      plantLevel += 2;
+      plantLevel += 1;
       break;
     case "angry":
       plantLevel += 1;
@@ -25,12 +25,12 @@ export function plantGrowth(mood, sleep) {
       break;
   }
 
-  if (sleep - 4 < 0) {
+  if (sleep - goal / 2 < 0) {
     return plantLevel;
-  } else if (sleep > 8) {
-    plantLevel += 4 + 8 - sleep;
+  } else if (sleep >= goal) {
+    plantLevel += 4;
   } else {
-    plantLevel = plantLevel + sleep - 4;
+    plantLevel += 2;
   }
 
   return plantLevel;
