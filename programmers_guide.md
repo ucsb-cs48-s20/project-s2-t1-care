@@ -7,7 +7,7 @@ Tech Stack:
     
 
 React Frameworks:
-* React Bootstrap
+* React Bootstrap: A front-end framework for user interface. Documentation, including more advanced styling, can be found here: https://react-bootstrap.github.io/components/alerts
 * Plotly: A react library that allows you to very simply create good looking graphs. By generating a list of x and y, it creates a very elegant line graph (or any type of graph). Documentation, including more advanced styling, can be found here: https://plotly.com/javascript/react/
 
 Database:
