@@ -39,7 +39,11 @@ export class JournalForm extends React.Component {
   }
 
   async handleSubmit(event) {
-    var plantLevel = plantGrowth(this.state.mood, parseInt(this.state.sleep));
+    var plantLevel = plantGrowth(
+      parseInt(this.state.currGoal),
+      this.state.mood,
+      parseInt(this.state.sleep)
+    );
 
     event.preventDefault();
 
@@ -53,10 +57,6 @@ export class JournalForm extends React.Component {
     };
 
     var currGoal = 8;
-    /* const userData = await this.returnUserData();
-    if (userData) {
-      currGoal = parseInt(userData.goal);
-    } */
 
     const body = {
       user: this.state.user,
