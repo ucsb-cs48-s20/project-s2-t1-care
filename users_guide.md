@@ -6,7 +6,7 @@ Description: an interactive self-care journal where you record your mood and sle
 
 ![journal_form.png](/journal_form.png)
 
-Description: log your mood and sleep every day in our simple journal form
+Description: log your mood and sleep every day in our simple journal form, sleep goal is also displayed on top
 
 ## Feature 2: plant
 
