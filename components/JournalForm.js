@@ -85,7 +85,7 @@ export class JournalForm extends React.Component {
     return (
       <form onSubmit={this.handleSubmit.bind(this)}>
         <label>
-          your sleep goal is {this.state.currGoal} hour(s)
+          your sleep goal is {this.state.currGoal} hour(s).
           <br></br>
         </label>
         <br></br>

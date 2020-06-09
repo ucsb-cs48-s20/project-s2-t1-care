@@ -15,8 +15,6 @@ export default function setform(props) {
           <h1> settings page </h1>
           <Settings user={user}></Settings>
           <br></br>
-          <br></br>
-          <br></br>
           <ResetButton user={user}> </ResetButton>
         </div>
       ) : (

@@ -65,7 +65,6 @@ export class Settings extends React.Component {
           </select>
         </label>
         <br></br>
-        <br></br>
         <Button variant="success" type="submit">
           submit
         </Button>

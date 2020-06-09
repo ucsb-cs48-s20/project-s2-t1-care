@@ -45,13 +45,17 @@ class ResetButton extends React.Component {
   render() {
     //return (<button variant = 'success' onClick={this.resetLevel}>Click me</button>)
     return (
-      <Button
-        variant="danger"
-        type="submit"
-        onClick={this.resetLevel.bind(this)}
-      >
-        Reset Plant Level
-      </Button>
+      <>
+        would you like to reset your plant level?
+        <br></br>
+        <Button
+          variant="danger"
+          type="submit"
+          onClick={this.resetLevel.bind(this)}
+        >
+          reset
+        </Button>
+      </>
     );
   }
 }
