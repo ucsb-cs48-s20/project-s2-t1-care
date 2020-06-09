@@ -38,6 +38,11 @@ export class JournalForm extends React.Component {
     this.setState({ [name]: value });
   }
 
+  async returnPlantLevel() {
+    const res = await fetch("/api/daily?sub=" + this.user.sub);
+    return res.json();
+  }
+
   async handleSubmit(event) {
     var plantLevel = plantGrowth(
       parseInt(this.state.currGoal),
