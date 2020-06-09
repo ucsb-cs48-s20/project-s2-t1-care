@@ -17,9 +17,9 @@ function Notification(props) {
       notif = (
         <Toast
           style={{
-            position: "absolute",
-            top: "150px",
-            right: "180px",
+            //position: "absolute",
+            minWidth: "250px",
+            textAlign: "left",
           }}
           onClose={() => setShow(false)}
           show={show}
@@ -39,13 +39,13 @@ function Notification(props) {
     } else {
       notif = (
         <Toast
-          style={{
-            position: "absolute",
-            top: "150px",
-            right: "180px",
-          }}
           onClose={() => setShow(false)}
           show={show}
+          style={{
+            //position: "absolute",
+            minWidth: "250px",
+            textAlign: "left",
+          }}
         >
           <Toast.Header>
             <img
@@ -92,7 +92,7 @@ class SubmitNotification extends React.Component {
   render() {
     return (
       <>
-        <div className="container" style={{ textAlign: "center" }}>
+        <div className="container" style={{ textAlign: "right" }}>
           <div className="column" style={{ display: "inline-block" }}>
             <Notification json={this.log} />
           </div>

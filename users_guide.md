@@ -31,4 +31,3 @@ Description: with the data from your previous journal entires, we created a grap
 Description: all of your previous journal entries are listed in the history tab.
 
 ![care-history.png](/care-history.png)
-

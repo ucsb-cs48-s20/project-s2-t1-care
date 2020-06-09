@@ -13,10 +13,9 @@ Go to https://ucsb-cs48.github.io/s20/lab/lab00_nj/ and follow Steps 9-11
 - Step 11: Because Auth0 has not been configured, the website will have a homepage, but clicking login will crash. However, make sure that the webpage runs.
 
 ## Step 3: Setting up Auth0 for LocalHost
+
 - Follow the steps here: https://github.com/ucsb-cs48-s20/demo-nextjs-app/blob/master/docs/auth0-localhost.md to create an Auth0 account and place these secrets into your .env file
 - Then, follow the steps here: https://github.com/ucsb-cs48-s20/demo-nextjs-app/blob/master/docs/auth0-github-actions.md to add your secrets to GitHub. This will allow npm test to run on GitGub.
-
-
 
 ## Step 4: Initializing the MongoDB Database
 
