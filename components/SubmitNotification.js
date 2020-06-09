@@ -69,23 +69,22 @@ class SubmitNotification extends React.Component {
   constructor(props) {
     super(props);
     this.user = props.user;
-    this.state = { plantLevel: 0, testList: [], plant2: 0 };
+    this.state = { plantLevel: 0, HistoryLog: [], plant2: 0 };
     this.plant = 10;
 
-    this.firstLevel = 0;
+    this.log = 0;
   }
 
-  async returnPlantLevel() {
+  async returnUserData() {
     const res = await fetch("/api/daily?sub=" + this.user.sub);
     return res.json();
   }
 
   async componentDidMount() {
-    const plantLevel = await this.returnPlantLevel();
+    const plantLevel = await this.returnUserData();
 
     if (plantLevel) {
-      console.log(plantLevel.testList);
-      this.firstLevel = plantLevel.testList;
+      this.log = plantLevel.HistoryLog;
       this.setState({ plantLevel: plantLevel, plant2: plantLevel.PlantLevel });
     }
   }
@@ -95,7 +94,7 @@ class SubmitNotification extends React.Component {
       <>
         <div className="container" style={{ textAlign: "center" }}>
           <div className="column" style={{ display: "inline-block" }}>
-            <Notification json={this.firstLevel} />
+            <Notification json={this.log} />
           </div>
         </div>
       </>
