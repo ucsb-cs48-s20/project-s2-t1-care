@@ -17,9 +17,7 @@ function HomePage(props) {
         //   justifyContent: "center",
         // }}
         >
-          <h1 style={{ textAlign: "center" }}>
-            chlorophyll your journal to take care of your plant!
-          </h1>
+          <h1>chlorophyll your journal to take care of your plant</h1>
           {/* <SubmitNotification user={user} />
 
           <MaxLevelNotification user={user} /> */}
@@ -29,7 +27,7 @@ function HomePage(props) {
       ) : (
         <div>
           <h1>you're not logged in!</h1>
-          <h2>please sign in to start growing together with your plant!</h2>
+          <h2>please sign in to start growing together with your plant.</h2>
         </div>
       )}
     </Layout>

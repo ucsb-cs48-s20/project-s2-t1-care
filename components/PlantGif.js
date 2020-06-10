@@ -69,9 +69,9 @@ class PlantGif extends React.Component {
             <br />
             <br />
             <br />
+            {/* <br />
             <br />
-            <br />
-            <br />
+            <br /> */}
 
             <div className="row ml-2">
               {/* <JSONDisplay json={this.firstLevel} /> */}
@@ -87,8 +87,8 @@ class PlantGif extends React.Component {
               >
                 <Alert.Heading> this is your plant. </Alert.Heading>
                 <br />
-                it is a representation of how you're doing. log more entries and
-                meet your goals to see it improve.
+                it is a representation of how you are taking care of yourself.
+                log more entries and meet your goals to see it grow with you.
               </Alert>
             </div>
           </div>

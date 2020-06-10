@@ -12,7 +12,7 @@ export default function setform(props) {
     <Layout user={user}>
       {user ? (
         <div>
-          <h1> settings page </h1>
+          <h1> settings </h1>
           <Settings user={user}></Settings>
           <br></br>
           <ResetButton user={user}> </ResetButton>

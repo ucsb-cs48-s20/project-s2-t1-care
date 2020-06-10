@@ -11,7 +11,7 @@ export default function MultiForm(props) {
     <Layout user={user}>
       {user ? (
         <div>
-          <h1> let's grow together </h1>
+          <h1> journal entry: let's grow together </h1>
           <JournalForm user={user}></JournalForm>
         </div>
       ) : (

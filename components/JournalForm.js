@@ -96,9 +96,12 @@ export class JournalForm extends React.Component {
     return (
       <Container>
         <Form onSubmit={this.handleSubmit.bind(this)}>
-          <p> your sleep goal is {this.state.currGoal} hour(s). </p>
-          <br />
-          <br />
+          <p>
+            {" "}
+            your sleep goal is currently set to {
+              this.state.currGoal
+            } hour(s).{" "}
+          </p>
 
           <div className="row">
             <br></br>
@@ -148,7 +151,7 @@ export class JournalForm extends React.Component {
           </div>
           <div className="row">
             <div className="col-md-10">
-              <Form.Label>log (optional):</Form.Label>
+              <Form.Label>note (optional):</Form.Label>
               <Form.Control
                 as="textarea"
                 rows="3"

@@ -26,7 +26,7 @@ function Notification(props) {
           onClose={() => setShow(false)}
           show={show}
         >
-          <Toast.Header>you have submitted today</Toast.Header>
+          <Toast.Header>you have submitted today. </Toast.Header>
         </Toast>
       );
     } else {
@@ -42,7 +42,7 @@ function Notification(props) {
           //   textAlign: "left",
           // }}
         >
-          <Toast.Header>you have not submitted today</Toast.Header>
+          <Toast.Header>you have not submitted today. </Toast.Header>
         </Toast>
       );
     }

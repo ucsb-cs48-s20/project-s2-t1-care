@@ -60,7 +60,7 @@ class Graph extends React.Component {
       <Plot
         data={toGraph}
         layout={{
-          title: "Mood and Sleep over Time",
+          title: "your mood and sleep over time",
           plot_bgcolor: "#FAFAD2",
           paper_bgcolor: "#FAFAD2",
         }}

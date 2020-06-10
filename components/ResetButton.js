@@ -11,7 +11,7 @@ class ResetButton extends React.Component {
     e.preventDefault();
     if (
       confirm(
-        "Are you sure you want to reset your plant? This action is irreversible. Note: This will keep your log of journal entries."
+        "are you sure you want to reset your plant? this action is irreversible. note: resetting will keep your log of journal entries."
       )
     ) {
       console.log("in the function");
