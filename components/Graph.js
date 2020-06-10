@@ -56,6 +56,9 @@ class Graph extends React.Component {
   render() {
     let toGraph = GenerateGraphData(this.firstLevel);
     return (
+      <>
+      <br/>
+      <br/>
       <Plot
         data={toGraph}
         layout={{
@@ -64,6 +67,8 @@ class Graph extends React.Component {
           paper_bgcolor: "#FAFAD2",
         }}
       />
+      <br/><br/><br/>
+      </>
     );
   }
 }
