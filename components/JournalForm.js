@@ -1,7 +1,13 @@
-import Button from "react-bootstrap/Button";
 import { mutate } from "swr";
 import Router from "next/router";
 import { plantGrowth } from "../utils/growLogic";
+import {
+  Container,
+  Button,
+  Form,
+  FormControl,
+  FormGroup,
+} from "react-bootstrap";
 
 export class JournalForm extends React.Component {
   constructor(props) {
@@ -10,6 +16,7 @@ export class JournalForm extends React.Component {
       user: props.user,
       sleep: "0 hour(s)",
       mood: "okay",
+      log: "",
       currGoal: 8,
     };
 
@@ -59,6 +66,7 @@ export class JournalForm extends React.Component {
       date: date,
       todaySleep: this.state.sleep,
       todayMood: this.state.mood,
+      log: this.state.log,
     };
 
     var currGoal = 8;
@@ -77,59 +85,89 @@ export class JournalForm extends React.Component {
       body: JSON.stringify(body),
     });
 
+    this.setState({
+      log: "",
+    });
     //delay, you submitted _ something and will be redirected
     Router.push("/");
   }
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit.bind(this)}>
-        <label>
-          sleep goal is {this.state.currGoal}
-          <br></br>
-        </label>
-        <br></br>
-        <label>
-          how many hours of sleep did you have?
-          <br></br>
-          <select
-            name="sleep"
-            value={this.state.sleep}
-            onChange={this.handleInputChange}
-          >
-            <option value="0 hour(s)">0 hour(s)</option>
-            <option value="1 hour(s)">1 hour(s)</option>
-            <option value="2 hour(s)">2 hour(s)</option>
-            <option value="3 hour(s)">3 hour(s)</option>
-            <option value="4 hour(s)">4 hour(s)</option>
-            <option value="5 hour(s)">5 hour(s)</option>
-            <option value="6 hour(s)">6 hour(s)</option>
-            <option value="7 hour(s)">7 hour(s)</option>
-            <option value="8 hour(s)">8 hour(s)</option>
-            <option value="9 hour(s)">9 hour(s)</option>
-            <option value="10+ hour(s)">10+ hour(s)</option>
-          </select>
-        </label>
-        <br></br>
-        <label>
-          how are you feeling today?
-          <br></br>
-          <select
-            name="mood"
-            value={this.state.mood}
-            onChange={this.handleInputChange}
-          >
-            <option value="happy">:)</option>
-            <option value="okay">:|</option>
-            <option value="sad">:'(</option>
-            <option value="angry">>:(</option>
-          </select>
-        </label>
-        <br></br>
-        <Button variant="success" type="submit">
-          submit
-        </Button>
-      </form>
+      <Container>
+        <Form onSubmit={this.handleSubmit.bind(this)}>
+          <p>
+            {" "}
+            your sleep goal is currently set to {
+              this.state.currGoal
+            } hour(s).{" "}
+          </p>
+
+          <div className="row">
+            <br></br>
+            <div className="col-md-5">
+              <Form.Label>
+                how many hours of sleep did you have?
+                <br></br>
+                <Form.Control
+                  as="select"
+                  name="sleep"
+                  value={this.state.sleep}
+                  onChange={this.handleInputChange}
+                >
+                  <option value="0 hour(s)">0 hour(s)</option>
+                  <option value="1 hour(s)">1 hour(s)</option>
+                  <option value="2 hour(s)">2 hour(s)</option>
+                  <option value="3 hour(s)">3 hour(s)</option>
+                  <option value="4 hour(s)">4 hour(s)</option>
+                  <option value="5 hour(s)">5 hour(s)</option>
+                  <option value="6 hour(s)">6 hour(s)</option>
+                  <option value="7 hour(s)">7 hour(s)</option>
+                  <option value="8 hour(s)">8 hour(s)</option>
+                  <option value="9 hour(s)">9 hour(s)</option>
+                  <option value="10+ hour(s)">10+ hour(s)</option>
+                </Form.Control>
+              </Form.Label>
+            </div>
+            <div className="col-md-5">
+              {/* <br></br> */}
+              <Form.Label>
+                how are you feeling today?
+                <br></br>
+                <Form.Control
+                  as="select"
+                  name="mood"
+                  value={this.state.mood}
+                  onChange={this.handleInputChange}
+                >
+                  <option value="happy"> :)</option>
+                  <option value="okay"> :|</option>
+                  <option value="sad"> :'(</option>
+                  <option value="angry">>:(</option>
+                </Form.Control>
+              </Form.Label>
+              <br />
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-md-10">
+              <Form.Label>note (optional):</Form.Label>
+              <Form.Control
+                as="textarea"
+                rows="3"
+                name="log"
+                value={this.state.log}
+                onChange={this.handleInputChange}
+              />
+            </div>
+          </div>
+          <br />
+          <br />
+          <Button variant="success" type="submit">
+            submit
+          </Button>
+        </Form>
+      </Container>
     );
   }
 }

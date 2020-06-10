@@ -1,4 +1,4 @@
-import Button from "react-bootstrap/Button";
+import { Button, Form } from "react-bootstrap";
 import { mutate } from "swr";
 
 export class Settings extends React.Component {
@@ -10,7 +10,6 @@ export class Settings extends React.Component {
     };
 
     this.handleInputChange = this.handleInputChange.bind(this);
-
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
@@ -38,15 +37,18 @@ export class Settings extends React.Component {
     });
 
     //delay, you submitted _ something and will be redirected
+    alert("you have changed your sleep goal to " + this.state.goal + ".");
   }
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit.bind(this)}>
-        <label>
-          what is your sleep goal?
+      <Form onSubmit={this.handleSubmit.bind(this)}>
+        <Form.Label>
+          what would you like to change your sleep goal to?
           <br></br>
-          <select
+          <Form.Control
+            className="col-md-5"
+            as="select"
             name="goal"
             value={this.state.goal}
             onChange={this.handleInputChange}
@@ -62,14 +64,13 @@ export class Settings extends React.Component {
             <option value="8 hour(s)">8 hour(s)</option>
             <option value="9 hour(s)">9 hour(s)</option>
             <option value="10+ hour(s)">10+ hour(s)</option>
-          </select>
-        </label>
-        <br></br>
-        <br></br>
+          </Form.Control>
+        </Form.Label>
+        <br />
         <Button variant="success" type="submit">
           submit
         </Button>
-      </form>
+      </Form>
     );
   }
 }

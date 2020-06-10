@@ -16,47 +16,33 @@ function Notification(props) {
     if (props.json[0].date == date) {
       notif = (
         <Toast
-          style={{
-            position: "absolute",
-            top: "150px",
-            right: "180px",
-          }}
+          // style={{
+          //   position: "absolute",
+          //   minWidth: "250px",
+          //   textAlign: "left",
+          // }}
+          className="mr-3"
+          style={{ backgroundColor: "DarkGreen" }}
           onClose={() => setShow(false)}
           show={show}
         >
-          <Toast.Header>
-            <img
-              src="holder.js/20x20?text=%20"
-              className="rounded mr-2"
-              alt=""
-            />
-            <strong className="mr-auto"> journal buds </strong>
-            <small> </small>
-          </Toast.Header>
-          <Toast.Body>you have submitted today</Toast.Body>
+          <Toast.Header>you have submitted today. </Toast.Header>
         </Toast>
       );
     } else {
       notif = (
         <Toast
-          style={{
-            position: "absolute",
-            top: "150px",
-            right: "180px",
-          }}
+          className="mr-3"
+          style={{ backgroundColor: "DarkGreen" }}
           onClose={() => setShow(false)}
           show={show}
+          // style={{
+          //   //position: "absolute",
+          //   minWidth: "250px",
+          //   textAlign: "left",
+          // }}
         >
-          <Toast.Header>
-            <img
-              src="holder.js/20x20?text=%20"
-              className="rounded mr-2"
-              alt=""
-            />
-            <strong className="mr-auto"> journal buds </strong>
-            <small> </small>
-          </Toast.Header>
-          <Toast.Body>you have not submitted today</Toast.Body>
+          <Toast.Header>you have not submitted today. </Toast.Header>
         </Toast>
       );
     }
@@ -92,11 +78,7 @@ class SubmitNotification extends React.Component {
   render() {
     return (
       <>
-        <div className="container" style={{ textAlign: "center" }}>
-          <div className="column" style={{ display: "inline-block" }}>
-            <Notification json={this.log} />
-          </div>
-        </div>
+        <Notification json={this.log} />
       </>
     );
   }
