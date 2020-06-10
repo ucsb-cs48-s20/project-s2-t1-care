@@ -16,10 +16,8 @@ In the beginning, we all did the database together because it was a really big p
 
 #### Lina
 
-Overall, our team worked heavily together on almost every aspect during lectures, sections, and our consistent Zoom work sessions. Our collaborated contributions consisted of GitHub mishaps, testing, labs, any feature concerning database, and almost every other feature and QA. I individually contributed most to the frontend, setting the outline for our MVP with the journal form and plant display as well as displaying toasts indicating submission. 
-
+Overall, our team worked heavily together on almost every aspect during lectures, sections, and our consistent Zoom work sessions. Our collaborated contributions consisted of GitHub mishaps, testing, labs, any feature concerning database, and almost every other feature and QA. I individually contributed most to the frontend, setting the outline for our MVP with the journal form and plant display as well as displaying toasts indicating submission.
 
 #### Misha
 
 Many of our team members have been flexible and filled diverse roles throughout this project. For example, at the begining, I worked on finding how to make a plant that can grow on command and look good. This lead to me creating the first iteration of our plant gif component which we have worked off of heavily. Additionally, I have focused on the css of the webpage in order to make a pleasing design base to work off of. I have worked entirely on the frontend and also completed the storybook portion of our project.
-

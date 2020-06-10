@@ -4,10 +4,12 @@ function throwError(message) {
 
 export function plantGrowth(goal, mood, sleep) {
   typeof mood === "string" || throwError("mood should be of type string");
-  typeof sleep === "number" || throwError("sleep should be of type int");
+  typeof sleep === "string" || throwError("sleep should be of type string");
 
   mood || throwError("mood should not be empty");
   sleep || throwError("sleep should not be empty");
+  sleep = parseInt(sleep);
+  goal = parseInt(goal);
 
   var plantLevel = 0;
   switch (mood) {

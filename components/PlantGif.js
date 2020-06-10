@@ -33,9 +33,7 @@ class PlantGif extends React.Component {
     } else {
       this.plantIMG = "plantframes/frame_30_delay-0.04s.gif";
     }
-    console.log(this.plantIMG);
     if (plantLevel) {
-      //console.log(plantLevel.HistoryLog);
       this.firstLevel = plantLevel.HistoryLog;
     }
     if (plantLevel) {
@@ -48,10 +46,6 @@ class PlantGif extends React.Component {
       <div className="container">
         <div className="row">
           <div className="col-md-7" style={{ textAlign: "center" }}>
-            {/* //  className="container" 
-        // style={{ textAlign: "center" }} 
-        > */}
-            {/* <div className="column mt-3" style={{ display: "inline-block" }}> */}
             <img
               src={this.plantIMG}
               className="img-fluid"
@@ -62,19 +56,14 @@ class PlantGif extends React.Component {
                 mixBlendMode: "multiply",
               }}
             />
-            {/* </div> */}
           </div>
           <div className="col-md-4">
             <br />
             <br />
             <br />
             <br />
-            {/* <br />
-            <br />
-            <br /> */}
 
             <div className="row ml-2">
-              {/* <JSONDisplay json={this.firstLevel} /> */}
               <SubmitNotification user={this.user} />
               <MaxLevelNotification user={this.user} />
             </div>
@@ -83,7 +72,6 @@ class PlantGif extends React.Component {
               <Alert
                 className="column mt-5"
                 style={{ verticalAlign: "bottom" }}
-                //style={{ textAlign: "center", margin: "0 auto" }}
               >
                 <Alert.Heading> this is your plant. </Alert.Heading>
                 <br />
@@ -92,12 +80,7 @@ class PlantGif extends React.Component {
               </Alert>
             </div>
           </div>
-          {/* <div
-          className="column"
-          style={{ textAlign: "center", margin: "0 auto" }}
-        ></div> */}
         </div>
-        {/* <JSONDisplay/> */}
       </div>
     );
   }

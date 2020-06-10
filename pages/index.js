@@ -10,17 +10,8 @@ function HomePage(props) {
   return (
     <Layout user={user}>
       {user ? (
-        <div
-        // style={{
-        //   alignItems: "center",
-        //   margin: "auto",
-        //   justifyContent: "center",
-        // }}
-        >
+        <div>
           <h1>chlorophyll your journal to take care of your plant</h1>
-          {/* <SubmitNotification user={user} />
-
-          <MaxLevelNotification user={user} /> */}
 
           <PlantGif user={user} style={{ backgroundColor: "transparent" }} />
         </div>

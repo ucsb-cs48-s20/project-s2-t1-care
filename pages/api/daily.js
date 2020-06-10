@@ -1,25 +1,5 @@
 import { database } from "../../utils/database";
 
-// async function getUser(req) {
-//   const { user } = req.body;
-
-//   if (!user) {
-//     throw {
-//       status: 400,
-//       message: "Missing user",
-//     };
-//   }
-
-//   const client = await database();
-//   const users = client.collection("users");
-
-//   const query = {
-//     user,
-//   };
-
-//   return users.findOne(query);
-// }
-
 async function getUser(req) {
   const { sub } = req.query;
 
@@ -48,10 +28,6 @@ async function updatePlantLevel(req) {
 
   const client = await database();
   const users = client.collection("users");
-
-  /*const query = {
-    user,
-  };*/
 
   const mutation = {
     $setOnInsert: {

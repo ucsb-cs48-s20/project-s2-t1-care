@@ -28,7 +28,6 @@ export class Settings extends React.Component {
       user: this.state.user,
       goal: parseInt(this.state.goal),
     };
-    //get request, make sure they have submitted as different day
 
     const res = await fetch("/api/settings", {
       method: "POST",
@@ -36,7 +35,6 @@ export class Settings extends React.Component {
       body: JSON.stringify(body),
     });
 
-    //delay, you submitted _ something and will be redirected
     alert("you have changed your sleep goal to " + this.state.goal + ".");
   }
 

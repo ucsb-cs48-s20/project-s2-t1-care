@@ -46,7 +46,6 @@ class Graph extends React.Component {
   async componentDidMount() {
     const userData = await this.returnuserData();
     if (userData) {
-      console.log(userData.HistoryLog);
       this.firstLevel = userData.HistoryLog;
     }
     if (userData) {
