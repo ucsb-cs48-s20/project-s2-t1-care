@@ -14,6 +14,11 @@ Description: see your plant grow slowly as you log more entries. it grows more f
 
 ![plant.png](/plant.png)
 
+## Feature 3: toast notifications
+Description: notifications that warn you when you have submitted today already, and when your plant level has reached its maximum and needs to be reset to grow.
+
+![toasts.png](/toasts.png)
+
 ## Feature 3: setting sleep goal, resetting plant level
 
 Goal Description: if you have a different sleep schedule than the default, or want to change it at any time, you may change your sleep goal in settings.
