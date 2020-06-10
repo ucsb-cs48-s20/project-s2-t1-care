@@ -12,15 +12,9 @@ function Notification(props) {
   if (props.json === 0) {
     return <p> </p>;
   } else {
-    console.log(props.json[0]);
     if (props.json[0].date == date) {
       notif = (
         <Toast
-          // style={{
-          //   position: "absolute",
-          //   minWidth: "250px",
-          //   textAlign: "left",
-          // }}
           className="mr-3"
           style={{ backgroundColor: "DarkGreen" }}
           onClose={() => setShow(false)}
@@ -36,11 +30,6 @@ function Notification(props) {
           style={{ backgroundColor: "DarkGreen" }}
           onClose={() => setShow(false)}
           show={show}
-          // style={{
-          //   //position: "absolute",
-          //   minWidth: "250px",
-          //   textAlign: "left",
-          // }}
         >
           <Toast.Header>you have not submitted today. </Toast.Header>
         </Toast>

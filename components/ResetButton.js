@@ -14,8 +14,6 @@ class ResetButton extends React.Component {
         "are you sure you want to reset your plant? this action is irreversible. note: resetting will keep your log of journal entries."
       )
     ) {
-      console.log("in the function");
-      console.log(this.state);
       const body = {
         user: this.user,
       };
@@ -43,7 +41,6 @@ class ResetButton extends React.Component {
   }
 
   render() {
-    //return (<button variant = 'success' onClick={this.resetLevel}>Click me</button>)
     return (
       <>
         would you like to reset your plant level?

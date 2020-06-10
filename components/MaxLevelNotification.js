@@ -13,11 +13,6 @@ function Notification(props) {
       <Toast
         className="mr-3"
         style={{ backgroundColor: "DarkGreen" }}
-        // style={{
-        //   //position: "absolute",
-        //   maxWidth: "250px",
-        //   textAlign: "left",
-        // }}
         onClose={() => setShow(false)}
         show={show}
       >
@@ -51,7 +46,6 @@ class MaxLevelNotification extends React.Component {
 
   async componentDidMount() {
     const userData = await this.returnUserData();
-    console.log(userData);
     if (userData) {
       this.setState({ plantLevel: userData.PlantLevel });
     }

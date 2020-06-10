@@ -52,16 +52,15 @@ export class JournalForm extends React.Component {
 
   async handleSubmit(event) {
     var plantLevel = plantGrowth(
-      parseInt(this.state.currGoal),
+      this.state.currGoal,
       this.state.mood,
-      parseInt(this.state.sleep)
+      this.state.sleep
     );
 
     event.preventDefault();
 
     var d = new Date();
     var date = d.getMonth() + 1 + " " + d.getDate() + " " + d.getFullYear();
-    console.log(date);
     const entry = {
       date: date,
       todaySleep: this.state.sleep,
@@ -77,7 +76,6 @@ export class JournalForm extends React.Component {
       entry: entry,
       goal: currGoal,
     };
-    //get request, make sure they have submitted as different day
 
     const res = await fetch("/api/daily", {
       method: "POST",
@@ -88,7 +86,6 @@ export class JournalForm extends React.Component {
     this.setState({
       log: "",
     });
-    //delay, you submitted _ something and will be redirected
     Router.push("/");
   }
 
@@ -130,7 +127,6 @@ export class JournalForm extends React.Component {
               </Form.Label>
             </div>
             <div className="col-md-5">
-              {/* <br></br> */}
               <Form.Label>
                 how are you feeling today?
                 <br></br>
