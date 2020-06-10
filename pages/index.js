@@ -1,8 +1,7 @@
 import Layout from "../components/Layout";
 import { optionalAuth } from "../utils/ssr";
 import PlantGif from "../components/PlantGif";
-import SubmitNotification from "../components/SubmitNotification";
-import MaxLevelNotification from "../components/MaxLevelNotification";
+
 export const getServerSideProps = optionalAuth;
 
 function HomePage(props) {
@@ -21,11 +20,10 @@ function HomePage(props) {
           <h1 style={{ textAlign: "center" }}>
             chlorophyll your journal to take care of your plant!
           </h1>
-          <SubmitNotification user={user} />
+          {/* <SubmitNotification user={user} />
 
-          <MaxLevelNotification user={user} />
-          <br></br>
-          <br></br>
+          <MaxLevelNotification user={user} /> */}
+
           <PlantGif user={user} style={{ backgroundColor: "transparent" }} />
         </div>
       ) : (

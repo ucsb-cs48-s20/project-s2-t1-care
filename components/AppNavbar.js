@@ -10,8 +10,7 @@ function AppNavbar(props) {
   const user = props.user;
 
   return (
-    // <Navbar bg="primary" expand="lg">
-    <Navbar bg="warning" expand="lg">
+    <Navbar style = {{backgroundColor: "DarkSeaGreen"}} expand="lg">
       <Container>
         <Link href="/" passHref={true}>
           <Navbar.Brand>take care of you and your plant</Navbar.Brand>
@@ -34,7 +33,7 @@ function AppNavbar(props) {
           </Nav>
 
           <Link
-            href="https://github.com/ucsb-cs48-s20/project-s2-t1-care"
+            href="github.com/ucsb-cs48-s20/project-s2-t1-care"
             passHref={true}
           >
             <Nav.Link>github</Nav.Link>

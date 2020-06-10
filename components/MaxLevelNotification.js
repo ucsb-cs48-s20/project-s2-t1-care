@@ -11,23 +11,19 @@ function Notification(props) {
     var notif = "";
     notif = (
       <Toast
-        style={{
-          //position: "absolute",
-          maxWidth: "250px",
-          textAlign: "left",
-        }}
+        className = "mr-3" style = {{backgroundColor: "DarkGreen"}}
+        // style={{
+        //   //position: "absolute",
+        //   maxWidth: "250px",
+        //   textAlign: "left",
+        // }}
         onClose={() => setShow(false)}
         show={show}
       >
         <Toast.Header>
-          <img src="holder.js/20x20?text=%20" className="rounded mr-2" alt="" />
-          <strong className="mr-auto"> journal buds </strong>
-          <small> </small>
-        </Toast.Header>
-        <Toast.Body>
           your plant level is at its max! go to settings to reset it and see
           your plant grow again.
-        </Toast.Body>
+        </Toast.Header>
       </Toast>
     );
   } else {
@@ -63,11 +59,7 @@ class MaxLevelNotification extends React.Component {
   render() {
     return (
       <>
-        <div className="container" style={{ textAlign: "right" }}>
-          <div className="column" style={{ display: "inline-block" }}>
-            <Notification level={this.state.plantLevel} />
-          </div>
-        </div>
+        <Notification level={this.state.plantLevel} />
       </>
     );
   }

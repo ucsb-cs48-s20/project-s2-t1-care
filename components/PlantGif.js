@@ -1,6 +1,9 @@
 import Button from "react-bootstrap/Button";
 import Image from "react-bootstrap/Image";
-import Toast from "react-bootstrap/Toast";
+import { Container, Toast, Alert } from "react-bootstrap";
+import SubmitNotification from "../components/SubmitNotification";
+import MaxLevelNotification from "../components/MaxLevelNotification";
+
 
 class PlantGif extends React.Component {
   constructor(props) {
@@ -43,31 +46,61 @@ class PlantGif extends React.Component {
 
   render() {
     return (
-      <>
-        <div className="container" style={{ textAlign: "center" }}>
-          <div className="column" style={{ display: "inline-block" }}>
+      <div className="container">
+        <div className="row">
+          <div className="col-md-7" style={{ textAlign: "center" }}>
+            {/* //  className="container" 
+        // style={{ textAlign: "center" }} 
+        > */}
+            {/* <div className="column mt-3" style={{ display: "inline-block" }}> */}
             <img
               src={this.plantIMG}
+              className="img-fluid"
               style={{
-                maxWidth: "100%",
-                maxHeight: "100%",
+                width: "450px",
+                maxWidth: "200%",
+                maxHeight: "200%",
                 mixBlendMode: "multiply",
               }}
             />
+            {/* </div> */}
           </div>
-        </div>
-        <div
+          <div className="col-md-4">
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            
+            <div className = "row ml-2">
+            {/* <JSONDisplay json={this.firstLevel} /> */}
+            <SubmitNotification user={this.user} />
+            <MaxLevelNotification user={this.user} />
+
+            </div>
+
+            <div className = "row">
+            <Alert
+              className="column mt-5"
+              style={{ verticalAlign: "bottom" }}
+              //style={{ textAlign: "center", margin: "0 auto" }}
+            >
+              <Alert.Heading> this is your plant. </Alert.Heading>
+              <br />
+              it is a representation of how you're doing.
+              log more entries and meet your goals to see it improve.
+            </Alert>
+            </div>
+          </div>
+          {/* <div
           className="column"
           style={{ textAlign: "center", margin: "0 auto" }}
-        >
-          this is your plant. it is a representation of how you're doing. log
-          more entries and meet your goals to see it improve.
+        ></div> */}
         </div>
-        <div
-          className="column"
-          style={{ textAlign: "center", margin: "0 auto" }}
-        ></div>
-      </>
+        {/* <JSONDisplay/> */}
+      </div>
     );
   }
 }
