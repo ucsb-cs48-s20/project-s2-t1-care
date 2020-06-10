@@ -11,7 +11,8 @@ function Notification(props) {
     var notif = "";
     notif = (
       <Toast
-        className = "mr-3" style = {{backgroundColor: "DarkGreen"}}
+        className="mr-3"
+        style={{ backgroundColor: "DarkGreen" }}
         // style={{
         //   //position: "absolute",
         //   maxWidth: "250px",

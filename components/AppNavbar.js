@@ -10,7 +10,7 @@ function AppNavbar(props) {
   const user = props.user;
 
   return (
-    <Navbar style = {{backgroundColor: "DarkSeaGreen"}} expand="lg">
+    <Navbar style={{ backgroundColor: "DarkSeaGreen" }} expand="lg">
       <Container>
         <Link href="/" passHref={true}>
           <Navbar.Brand>take care of you and your plant</Navbar.Brand>

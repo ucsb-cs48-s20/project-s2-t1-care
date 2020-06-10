@@ -4,7 +4,6 @@ import { Container, Toast, Alert } from "react-bootstrap";
 import SubmitNotification from "../components/SubmitNotification";
 import MaxLevelNotification from "../components/MaxLevelNotification";
 
-
 class PlantGif extends React.Component {
   constructor(props) {
     super(props);
@@ -73,25 +72,24 @@ class PlantGif extends React.Component {
             <br />
             <br />
             <br />
-            
-            <div className = "row ml-2">
-            {/* <JSONDisplay json={this.firstLevel} /> */}
-            <SubmitNotification user={this.user} />
-            <MaxLevelNotification user={this.user} />
 
+            <div className="row ml-2">
+              {/* <JSONDisplay json={this.firstLevel} /> */}
+              <SubmitNotification user={this.user} />
+              <MaxLevelNotification user={this.user} />
             </div>
 
-            <div className = "row">
-            <Alert
-              className="column mt-5"
-              style={{ verticalAlign: "bottom" }}
-              //style={{ textAlign: "center", margin: "0 auto" }}
-            >
-              <Alert.Heading> this is your plant. </Alert.Heading>
-              <br />
-              it is a representation of how you're doing.
-              log more entries and meet your goals to see it improve.
-            </Alert>
+            <div className="row">
+              <Alert
+                className="column mt-5"
+                style={{ verticalAlign: "bottom" }}
+                //style={{ textAlign: "center", margin: "0 auto" }}
+              >
+                <Alert.Heading> this is your plant. </Alert.Heading>
+                <br />
+                it is a representation of how you're doing. log more entries and
+                meet your goals to see it improve.
+              </Alert>
             </div>
           </div>
           {/* <div

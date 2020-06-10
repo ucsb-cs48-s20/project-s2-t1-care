@@ -21,19 +21,19 @@ function Notification(props) {
           //   minWidth: "250px",
           //   textAlign: "left",
           // }}
-          className = "mr-3" style = {{backgroundColor: "DarkGreen"}}
+          className="mr-3"
+          style={{ backgroundColor: "DarkGreen" }}
           onClose={() => setShow(false)}
           show={show}
         >
-          <Toast.Header>
-          you have submitted today
-          </Toast.Header>
+          <Toast.Header>you have submitted today</Toast.Header>
         </Toast>
       );
     } else {
       notif = (
         <Toast
-          className = "mr-3" style = {{backgroundColor: "DarkGreen"}}
+          className="mr-3"
+          style={{ backgroundColor: "DarkGreen" }}
           onClose={() => setShow(false)}
           show={show}
           // style={{
@@ -42,8 +42,7 @@ function Notification(props) {
           //   textAlign: "left",
           // }}
         >
-          <Toast.Header>you have not submitted today
-          </Toast.Header>
+          <Toast.Header>you have not submitted today</Toast.Header>
         </Toast>
       );
     }
@@ -79,7 +78,7 @@ class SubmitNotification extends React.Component {
   render() {
     return (
       <>
-            <Notification json={this.log} />
+        <Notification json={this.log} />
       </>
     );
   }

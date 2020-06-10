@@ -66,7 +66,7 @@ export class JournalForm extends React.Component {
       date: date,
       todaySleep: this.state.sleep,
       todayMood: this.state.mood,
-      log: this.state.log
+      log: this.state.log,
     };
 
     var currGoal = 8;
@@ -86,7 +86,7 @@ export class JournalForm extends React.Component {
     });
 
     this.setState({
-      log: ""
+      log: "",
     });
     //delay, you submitted _ something and will be redirected
     Router.push("/");
@@ -96,11 +96,12 @@ export class JournalForm extends React.Component {
     return (
       <Container>
         <Form onSubmit={this.handleSubmit.bind(this)}>
-        <p> your sleep goal is {this.state.currGoal} hour(s). </p>
-        <br/><br/>
+          <p> your sleep goal is {this.state.currGoal} hour(s). </p>
+          <br />
+          <br />
 
           <div className="row">
-          <br></br>
+            <br></br>
             <div className="col-md-5">
               <Form.Label>
                 how many hours of sleep did you have?
@@ -145,11 +146,17 @@ export class JournalForm extends React.Component {
               <br />
             </div>
           </div>
-          <div className = "row">
-          <div className="col-md-10">
-            <Form.Label>log (optional):</Form.Label>
-            <Form.Control as="textarea" rows="3" name = "log" value = {this.state.log} onChange = {this.handleInputChange}/>
-          </div>
+          <div className="row">
+            <div className="col-md-10">
+              <Form.Label>log (optional):</Form.Label>
+              <Form.Control
+                as="textarea"
+                rows="3"
+                name="log"
+                value={this.state.log}
+                onChange={this.handleInputChange}
+              />
+            </div>
           </div>
           <br />
           <br />

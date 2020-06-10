@@ -1,7 +1,6 @@
 import React from "react";
 import Plot from "react-plotly.js";
 
-
 function GenerateGraphData(inputList) {
   let x = [];
   let y = [];

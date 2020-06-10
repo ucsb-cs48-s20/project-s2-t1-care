@@ -17,7 +17,10 @@ export default function MultiForm(props) {
       {user ? (
         <div>
           <h1> let's see how you're doing! </h1>
+          <br />
           <Graph user={user}></Graph>
+          <br />
+          <br />
           <JournalLog user={user}></JournalLog>
         </div>
       ) : (

@@ -10,9 +10,12 @@ function JSONDisplay(props) {
           on {element.date}, you felt {element.todayMood} and got{" "}
           {element.todaySleep} of sleep.
         </p>
-        {(element.hasOwnProperty("log") && element.log !== "") &&
-          <blockquote style = {{marginLeft: "20px"}}> {element.log} </blockquote>
-        }
+        {element.hasOwnProperty("log") && element.log !== "" && (
+          <blockquote style={{ marginLeft: "20px" }}>
+            {" "}
+            {element.log}{" "}
+          </blockquote>
+        )}
       </>
     ));
     return (
@@ -58,10 +61,10 @@ class JournalLog extends React.Component {
     }
 
     return (
-      <div className = "col-md-8">
+      <div className="col-md-8">
         <JSONDisplay json={this.firstLevel} />
-     </div>
-    )  
+      </div>
+    );
   }
 }
 export default JournalLog;
